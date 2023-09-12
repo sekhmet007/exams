@@ -16,7 +16,7 @@ void    ft_putnbr(int nbr)
     write(1, &c, 1);
 }
 
-int main(int ac, char **av)
+int main(void)
 {
     int i = 0;
 

@@ -16,6 +16,12 @@ int main(int ac, char **av)
             return (0);
         }
 
+        if (nbr == 1)// cas pour nbr = a 1
+        {
+            printf("1\n");
+            return (0);
+        }
+
         while (nbr != 1)
         {
             if (nbr % diviseur == 0) //c est un facteur premier

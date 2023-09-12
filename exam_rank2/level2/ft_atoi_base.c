@@ -8,7 +8,7 @@ int     ft_atoi_base(const char *str, int str_base)
 
     if(str_base >= 2 || str_base <= 16)
     {
-        while (str[i] == ' ' || str[i] == '\t')
+        while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
             str++;
         if (str[i] == '-')
             sign = -1;

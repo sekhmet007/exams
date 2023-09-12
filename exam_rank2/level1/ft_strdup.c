@@ -2,6 +2,7 @@
 la memmoire occupe par cette nouvelle chaine est obtemur en appelant malloc.*/
 
 #include <stdlib.h>
+#include <stdio.h>
 
 char    *ft_strdup(char *src)
 {
@@ -22,9 +23,7 @@ char    *ft_strdup(char *src)
     dest[i] = '\0';
     return (dest);
 }
-#include <stdio.h>
 
-char *ft_strdup(char *src);
 
 int main(void)
 {

@@ -26,7 +26,7 @@ int     main(int ac, char **av)
 
             while(av[1][i])
             {
-                    while ((av[1][i] == ' ' && av[1][i + 1] == ' ')
+                    while ((av[1][i] == ' ' && av[1][i + 1] == ' ')//je gere les esp et tab consecutif
                                             || (av[1][i] == '\t'  && av[1][i + 1] == '\t'))
                             i++;
                     if (av[1][i] == ' ' || av[1][i] == '\t')
