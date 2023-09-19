@@ -40,24 +40,6 @@ int     is_prime(int nbr)
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 int     main(int ac, char ** av)
 {
     if(ac != 2)
