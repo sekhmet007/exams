@@ -33,7 +33,7 @@ int	main(int ac , char **av)
 		write(1, "\n", 1);
 		return (0);
 	}
-	if(ac == 2)
+	else if(ac == 2)
 	{
 		nbr = ft_atoi(av[1]);
 		if (nbr >= 0)           // si av[1] est positif
