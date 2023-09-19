@@ -4,6 +4,8 @@
 
 #include <stdio.h>
 
+version 1:
+
 void    sort_int_tab(int *tab, unsigned int size)
 {
     for(unsigned int elem_trie = 0; elem_trie < size - 1; elem_trie++)
@@ -19,6 +21,27 @@ void    sort_int_tab(int *tab, unsigned int size)
         }
     }
 }
+
+version 2:
+
+void    sort_int_tab(int *tab, unsigned int size)
+{
+    unsigned int i = 0;
+    int swap;
+
+    while (i < (size -1))
+    {
+        if (tab[i] > tab[i + 1])
+        {
+            swap = tab[i];
+            tab[i] = tab[i + 1];
+            tab[tab + 1] = swap;
+            i = -1;
+        }
+        i++;
+    }
+}
+
 int main()
 {
     int arr[] = {4, 2, 7, 1, 9, 3};
