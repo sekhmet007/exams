@@ -26,10 +26,18 @@ void	print_hexa(int nbr)
 
 int	main(int ac , char **av)
 {
+	int nbr;
+
+	if (ac != 2)
+	{
+		write(1, "\n", 1);
+		return (0);
+	}
 	if(ac == 2)
 	{
-		if (ft_atoi(av[1] >= 0))// si av[1] est positif
-			print_hexa(ft_atoi(av[1]));
+		nbr = ft_atoi(av[1]);
+		if (nbr >= 0)           // si av[1] est positif
+			print_hexa(nbr);
 	}
 	write(1, "\n", 1);
 	return (0);
