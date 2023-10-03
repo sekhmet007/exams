@@ -44,6 +44,13 @@ char    **ft_split(char *str)
     tab[mot] = NULL;
     return (tab);
     }
+int    ft_strlen(char *str)
+{
+    int i = 0;
+    while(str[i])
+        i++;
+    return (i);
+}
 
 int main(int ac, char **av)
 {
@@ -51,20 +58,23 @@ int main(int ac, char **av)
 
     if (ac == 2)
     {
-        char **words = ft_split(av[1]); // Split de la string
-        if (words == NULL)
+        char **mots = ft_split(av[1]); // Split de la string
+        if (mots == NULL)
           return 1;
 
         // trouver le nbr de mots
-        int word_count = 0;
-        while (words[word_count] != NULL)
-            word_count++;
+        
+        int count_mots = 0;
+        
+        while (mots[count_mots] != NULL)
+            count_mots++;
 
 
         // Reverse and print les mot
-        for (i = word_count - 1; i >= 0; i--)
+        
+        for (i = count_mots - 1; i >= 0; i--)
         {
-            write(1, words[i], strlen(words[i]));
+            write(1, mots[i], ft_strlen(mots[i]));
             if (i > 0)
             {
                 write(1, " ", 1);
@@ -72,11 +82,11 @@ int main(int ac, char **av)
         }
 
         // Free memory 
-        for (i = 0; i < word_count; i++)
+        for (i = 0; i < count_mots; i++)
         {
-            free(words[i]);
+            free(mots[i]);
         }
-        free(words);
+        free(mots);
     }
     write(1, "\n", 1);
     return 0;
